@@ -15,10 +15,6 @@ author:
   name:
   email:
   twitter: # twitter username without the @ symbol
-social:
-  name: Treat Template
-  links:
-    - https://github.com/CloudCannon/treat-jekyll-template
 
 # -----
 # Build

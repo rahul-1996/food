@@ -1,8 +1,8 @@
 - name: Home
   link: /
 - name: Dataset
-  link: /dataset/
+  link: /recipes/
 - name: Visualization
-  link: /visualization/
+  link: /about/
 - name: Advanced
-  link: /advanced/
+  link: /contact/

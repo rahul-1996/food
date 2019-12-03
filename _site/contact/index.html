@@ -12,14 +12,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Food blog template for Jekyll." />
 <meta property="og:description" content="Food blog template for Jekyll." />
-<link rel="canonical" href="http://localhost:4000/contact/" />
-<meta property="og:url" content="http://localhost:4000/contact/" />
+<link rel="canonical" href="https://spring-bat.cloudvent.net//contact/" />
+<meta property="og:url" content="https://spring-bat.cloudvent.net//contact/" />
 <meta property="og:site_name" content="Treat Template" />
 <script type="application/ld+json">
-{"description":"Food blog template for Jekyll.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/siteicon.png"}},"@type":"WebPage","headline":"Contact","url":"http://localhost:4000/contact/","@context":"https://schema.org"}</script>
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://spring-bat.cloudvent.net//siteicon.png"}},"@type":"WebPage","headline":"Contact","url":"https://spring-bat.cloudvent.net//contact/","description":"Food blog template for Jekyll.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Treat Template" />
+		<link type="application/atom+xml" rel="alternate" href="https://spring-bat.cloudvent.net//feed.xml" title="Treat Template" />
 
 		<link href="//fonts.googleapis.com/css?family=Antic+Slab|Fira+Sans" rel="stylesheet">
 		<link rel="stylesheet" media="screen" href="/css/screen.css">
@@ -63,9 +63,77 @@
 		</header>
 			
 		<div class="container main-content">
-			<section class="content"><h1>Advanced Visualization</h1>
+			<section class="content"><h1>Competition Bar Graph</h1>
+ 
+ 	<b><h2>Which hotels have a tendency to be crowded on weekdays? What do people prefer on the weekends? These are the questions we wish to answer from the below competition bar graph.</h2></b>
+	<div class="flourish-embed" data-src="visualisation/1011950"></div><script src="https://public.flourish.studio/resources/embed.js"></script>
 
-	<div class="flourish-embed" data-src="visualisation/1011841"></div><script src="https://public.flourish.studio/resources/embed.js"></script> 
+
+
+	<p>As seen from the competition bar graph, the footfall in the ‘Yuva India Restaurant’ can be described as:
+Yuva India Restaurant has a very close proximity to the CMU campus. Hence, on the weekdays, the restaurant experiences a high amount of footfall.
+Compared to weekdays, the footfall on the weekends increases at a lesser pace. This can be attributed to the fact that over the weekends, many people have parties and hence, the footfall in dessert shops and pizza places increases at an extremely high pace. 
+</span></p>
+
+<br><br>
+
+<h1> Sentiment Analysis </h1>
+
+<b><h2>Can we provide a personalized feedback to each restaurant based on sentiments of the reviews? </h2></b>
+
+<div class='tableauPlaceholder' id='viz1575331534163' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;sentiment_15752403807430&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='sentiment_15752403807430&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;sentiment_15752403807430&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575331534163');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+<p>To answer this question, we have created an interactive sentiment analysis interface for each restaurant based on the reviews provided. We have measured 2 metrics for analysis, the Polarity and the Subjectivity of the reviews. Both the polarity and the subjectivity have been scaled to lie between 0 and 100. Further, using the provided interface, we can filter restaurants based on the name of the restaurant, state, and city. We can analyze and compare the average perception of restaurants. Hovering over a particular restaurant also shows its address in the tooltip. </p>
+
+<br><br>
+<h1> Word Cloud </h1>
+
+<b><h2>Can we observe some trends in the reviews based on different geographical locations? To answer this question, we have created word clouds. </h2></b>
+
+<p>To get a general sentiment regarding the restaurant and its reviews, we build a customizable word cloud for each state. This would save time by getting a general idea regarding the way users perceive the food in the restaurant, as compared to scrolling through tons of reviews. Statewise, we can get a general idea as to which state has the best reviews and which state can improve their average restaurant food quality.</p>
+
+<img src="../arkansas.png" alt="Arkansas"/>
+
+<p>Above Figure is a word cloud of the state of Arkansas. As can be observed from the cloud, most reviews feature McDonalds. Some other popular keywords in reviews of Arkansas restaurants is chicken nuggets, fast food etc.</p>
+
+<img src = "../indiana.png" alt="Indiana"/	>
+
+<p>The above word cloud is representative of the state of Indiana. It can be clearly seen that the popular keywords are ‘Chicken’, ‘pancakes’, ‘breakfast’.</p>
+
+<h1>Clustering using KMeans</h1>
+
+<b><h2>Can we provide any feedback to the restaurants based on the data we have? Can we give them some insights through which they can increase their future ratings?</h2></b>
+
+<br><br>
+
+<h1>Star rating of the restaurant</h1>
+
+<b><h2> Can we predict the star rating of the restaurant? What are the features that affect the rating the most? </h2></b>
+
+<img src="../regression.png" alt="Regression" />
+
+<p>From yelp_business_attributes.csv, we extracted 47 binary features relevant to the restaurants in our dataset. Using these features, we trained a Linear Regression model to predict the star rating of a restaurant.
+The learned weights enable us to find the importance of different features in making the prediction. This is done by taking the absolute value of the weight and converting it to a percentage value. Following bar plot shows the importance of different features in determining the star rating of a restaurant. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
 			
 		</div>

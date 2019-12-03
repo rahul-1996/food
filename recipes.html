@@ -2,4 +2,146 @@
 title: Recipes
 image_view: true
 ---
-<h1>Data Cleaning</h1>
+<style>
+	.size {
+		font-size: 20px; 
+	}
+</style>
+
+<h1>Dataset</h1>
+
+
+<div class = "size">
+
+	<p class = "size">
+	The dataset is from a Kaggle competition hosted by Yelp. 
+	<br><br>
+	Dataset statistics:
+	</p>
+
+	<p>&nbsp;</p>
+	<table border = "1">
+	<tbody>
+	<tr>
+	<td>
+	<p><span style="font-weight: 400;">Data File</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">Number of Rows</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">Number of features</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">Description</span></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p><span style="font-weight: 400;">Business.csv</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">37040</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">13</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">This file contains all the restaurants with features like location, reviews, neighborhood, address</span></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p><span style="font-weight: 400;">Checkin.csv</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">26350</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">8</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">This file contains all the restaurants with the footfall for each day along with the hours of operation</span></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p><span style="font-weight: 400;">Review.csv</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">37580</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">14</span></p>
+	</td>
+	<td>
+	<p><span style="font-weight: 400;">This file contains all the reviews provided by the users for various restaurants in the Business.csv file.&nbsp;</span></p>
+	</td>
+	</tr>
+	</tbody>
+	</table>
+
+
+	<p style="font-size:20px"> The business.csv file consists of the following fields: </p>
+
+	<ul>
+		<li class = "size"> business_id (String): unique ID for every restaurant in the dataset </li>
+		<li class = "size"> name (String): The name of the restaurant </li>
+		<li class = "size"> neighborhood (String): Neighborhood in which the restaurant is located </li>
+		<li class = "size"> address (String): Address of the restaurant </li>
+		<li class = "size"> city (String): City in which the restaurant is located </li>
+		<li class = "size"> state (String): 2-character code denoting the state in which the restaurant is located </li>
+		<li class = "size"> postal_code (Number): 5-digit zip code of the location </li>
+		<li class = "size"> latitude (Double): Longitudinal location of the restaurant </li>
+		<li class = "size"> longitude (Double): Latitudinal location of the restaurant </li>
+		<li class = "size"> stars (Double): The overall star rating of the restaurant on Yelp </li>
+		<li class = "size"> review_count (Integer): Number of reviews of the restaurant on Yelp </li>
+		<li class = "size"> is_open (Binary): 0-1 denoting whether the restaurant is open or not </li>
+		<li class = "size"> categories (String): The cuisines available at the restaurant </li>
+	</ul>
+
+	<p class = "size"> The dataset also consists of other information such as reviews, which we plan on utilizing for visualizations in the final submission. For the advanced visualizations and the predictions, we are using the reviews.csv dataset, which contain user reviews for each restaurant. </p>
+
+	<ul>
+		<li class = "size"> review_id (String): unique ID for every review in the dataset </li>
+		<li class = "size"> user_id (String): unique ID for every user in the dataset </li>
+		<li class = "size"> Business_id (String): unique ID for every restaurant in the dataset </li>
+		<li class = "size"> stars (int) rating from 1 to 5 </li>
+		<li class = "size"> date (Date) Date of the review </li>
+		<li class = "size"> text (String) Contents of the review </li>	
+	</ul>
+
+	<p class = "size"> We performed a left join to filter the restaurants along with all their reviews. 
+
+	<br>
+	 
+	We have also used the checkin.csv data file, which contains the working hours for each restaurant along with the footfall for all the 7 days of the week.
+
+	</p>
+
+	<ul>
+		<li class = "size"> Business_id:(String): unique ID for every restaurant in the dataset </li>
+		<li class = "size"> Hours of operation: (int) Specifies the hours for which the restaurant specified by the business id is open </li>
+		<li class = "size"> footfall: (int) number of people visiting the restaurant </li>
+	</ul>
+	 
+
+	<p class = "size"> We performed a left join to get the names of the restaurant from the business id. <br>	
+	Data Cleaning using Wrangler. Steps taken to clean business.csv:
+	</p>
+
+	<ul>
+
+		<li class = "size"> Keep records with valid state code in North America. This includes Canada and the United States. Other records are filtered out. </li>
+		<li class = "size"> Trim quotes (""") from name and address fields. </li>
+		<li class = "size"> Keep records with review_count >= 8 </li>
+		<li class = "size"> Drop postal_code and is_open columns since they are of no use in our analysis. </li>
+
+	</ul>
+
+	<p> Steps taken to clean review.csv:
+	Grouped all the reviews by business ids
+	Performed a left join with business.csv to get all the restaurant names in the review.csv file
+	For each restaurant, we further appended each review in a list.
+
+</div>

@@ -12,14 +12,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Food blog template for Jekyll." />
 <meta property="og:description" content="Food blog template for Jekyll." />
-<link rel="canonical" href="http://localhost:4000/about/" />
-<meta property="og:url" content="http://localhost:4000/about/" />
+<link rel="canonical" href="https://spring-bat.cloudvent.net//about/" />
+<meta property="og:url" content="https://spring-bat.cloudvent.net//about/" />
 <meta property="og:site_name" content="Treat Template" />
 <script type="application/ld+json">
-{"description":"Food blog template for Jekyll.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/siteicon.png"}},"@type":"WebSite","headline":"About","sameAs":["https://github.com/CloudCannon/treat-jekyll-template"],"url":"http://localhost:4000/about/","name":"Treat Template","@context":"https://schema.org"}</script>
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://spring-bat.cloudvent.net//siteicon.png"}},"@type":"WebSite","headline":"About","url":"https://spring-bat.cloudvent.net//about/","name":"Treat Template","description":"Food blog template for Jekyll.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Treat Template" />
+		<link type="application/atom+xml" rel="alternate" href="https://spring-bat.cloudvent.net//feed.xml" title="Treat Template" />
 
 		<link href="//fonts.googleapis.com/css?family=Antic+Slab|Fira+Sans" rel="stylesheet">
 		<link rel="stylesheet" media="screen" href="/css/screen.css">
@@ -64,32 +64,52 @@
 			
 		<div class="container main-content">
 			<section class="content"><div class="editable">
-	<h1>Visualizations</h1>
+	<h1>Category based Visualization</h1>
 
 	<div class='tableauPlaceholder' id='viz1574292015001' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;category_IDS&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;category_IDS&#47;Dashboard1?:embed=y&amp;:display_count=y&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;category_IDS&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1574292015001');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
 </div>
+<p>The below visualization allows you to filter restaurant categories based on city and neighborhood. Categories include cuisines such as American, Indian, Chinese etc. The city and location filters allow you to choose a neighborhood such as Squirrel Hill in Pittsburgh, PA. Each cuisine is assigned a distinct color to aid is visualization.
 
+The top cuisine listed for each restaurant is chosen as the one that best represents the restaurant. For the full submission, we plan to incorporate multiple cuisines for each restaurant. For restaurants that do not have category data, we just use a restaurant placeholder.</p>
+
+<br><br>
 <div>
-	
+
+<h1>Restaurants based on Location and Star Value</h1>
+
 <div class='tableauPlaceholder' id='viz1574304774612' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;Visualization_15743047803220&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Visualization_15743047803220&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;Visualization_15743047803220&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1574304774612');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
 </div>
 
+<p>The following visualization allows you to explore restaurants in a particular city based on their star value. The size of a block in the displayed visualization is representative of the total number of reviews that are present in the given dataset for that restaurant.
+
+This visualization is interactive, as it allows users to select the locality in which they want to explore restaurants. They are also able to filter restaurants using their star value by making use of the filter present on the side. The restaurants that satisfy the filter requirements are sized and coloured in the visualization according to the number of reviews they having, enabling the user to see a ranked order of the restaurants.</p>
+
+<br><br>
 
 <div>
+
+	<h1>Visualizing Distribution of Restaurants and their Quality</h1>
 	
 	<div class='tableauPlaceholder' id='viz1574120272413' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;id&#47;idsProject&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;idsProject&#47;Sheet1?:embed=y&amp;:display_count=y&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;id&#47;idsProject&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1574120272413');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
 
 </div>
 
+<p>In the Map based visualization above, we plot the different cities in our Yelp Dataset. The size of the point (city) is representative of the number of restaurants in that city present in our dataset. For every city, we calculate the average star rating of the restaurants in that city. This is visualized using step-color labeling. The visualization provides the option of filtering by the state.</p>
 
+<br><br>
 <div>
+	<h1>CityWise Distribution of Reviews</h1>
 	
 	<div class='tableauPlaceholder' id='viz1574024850958' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15740244643380&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_15740244643380&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15740244643380&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1574024850958');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
-</div></section>
+</div>
+
+<p>The below 'packed bubbles' visualization showcases cities along with the number of reviews. As is evident from the Visualization, The city of Las Vegas has the maximum number of user reviews. This can be accounted to the fact that Vegas is a popular tourist destination, with a huge number of hotels and restaurants.</p>
+
+</section>
 			
 		</div>
 		<footer>
